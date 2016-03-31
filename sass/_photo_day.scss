@@ -1,0 +1,55 @@
+// Styles for photo day component
+$xs-height: 400px;
+$sm-height: 600px;
+$md-height: 800px;
+
+.photo-day {
+  position: relative;
+  height: $xs-height;
+  padding-top: $xs-height/8;
+  @media (min-width: $screen-sm-min) {
+    padding-top: ($sm-height - $xs-height)/2;
+    height: $sm-height;
+  }
+  @media (min-width: $screen-md-min) {
+    padding-top: ($md-height - $xs-height)/2;
+    height: $md-height;
+  }
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.photo-day__overlay {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(38, 48, 58);
+  opacity: 0.6;
+}
+
+.photo-day__details {
+  max-height: (3*$xs-height)/4;
+  @media (min-width: $screen-sm-min) {
+    height: $xs-height;
+  }
+  @media (min-width: $screen-md-min) {
+    height: $xs-height;
+  }
+  overflow-y: scroll;
+  color: white;
+  opacity: 0.9;
+}
+
+.details__header {
+  text-align: center;
+}
+
+.details__lead {
+  text-align: center;
+  font-size: $font-size-large;
+  font-style: italic;
+}
